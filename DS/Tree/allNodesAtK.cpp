@@ -1,0 +1,54 @@
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+struct node {
+  int data;
+  struct node *left;
+  struct node *right;
+
+  node(int num) {
+    data = num;
+    left = NULL;
+    right = NULL;
+  }
+};
+
+int heigth(node *root) {
+  if (root == NULL) {
+    return 0;
+  }
+
+  int right = heigth(root->right);
+  int left = heigth(root->left);
+  if (left > right) {
+    return 1 + left;
+  }
+  return 1 + right;
+}
+
+void KthNode(node *cnode, int k) {
+  if (cnode == NULL) {
+    return;
+  }
+  if (k <= 0) {
+    cout << cnode->data << " ";
+    return;
+  }
+  KthNode(cnode->left, k - 1);
+  KthNode(cnode->right, k - 1);
+}
+
+int main() {
+
+  struct node *root = new node(1);
+  root->left = new node(2);
+  root->right = new node(3);
+  root->left->left = new node(4);
+  root->left->right = new node(5);
+  root->right->left = new node(6);
+  root->right->right = new node(7);
+
+  KthNode(root, 2);
+  return 0;
+}
