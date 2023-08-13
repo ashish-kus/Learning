@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <title> Food Court</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Boxi icons style sheet -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <!-- google fonts popins  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap"
+    rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <a href="#" class="logo"> Food Villa </a>
+
+    <ul class="navbar" id="nav">
+      <li><a href="#home">Home</a>
+      <li><a href="#about">About</a>
+      <li><a href="#menu">Menu</a>
+      <li><a href="#service">Sevice</a>
+      <li><a href="#contect">Contect</a>
+    </ul>
+  </header>
+
+  <!-- Mobile navbar -->
+
+  <section class="mnav-container">
+    <ul class="mnavbar">
+      <li class="navbar-item"><a href="#home" class="icon"><i class='bx bxs-home'></i></a></li>
+      <li class="navbar-item"><a href="#about" class="icon"><i class='bx bxs-info-circle'></i></a></li>
+      <li class="navbar-item"><a href="#menu" class="icon"><i class='bx bxs-food-menu'></i></a></li>
+      <li class="navbar-item"><a href="#service" class="icon"><i class='bx bxs-briefcase-alt-2'></i></a></li>
+      <li class="navbar-item"><a href="#contact" class="icon"><i class='bx bxs-message-square-dots'></i></i></a></li>
+    </ul>
+  </section>
+
+  <!-- landing  home page   -->
+
+  <section class="landing" id="home">
+    <div class="home-text">
+      <h1> Full website </h1>
+      <h2> Food The <br> Most Important Thing</h2>
+      <a href="#" class="btn"> Today's Menu</a>
+    </div>
+
+    <div class="home-img">
+      <img src="./img/nhome.png" alt="food">
+    </div>
+  </section>
+
+
+  <!-- About us section -->
+
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="./img/eat-healthy.png" alt="about-img">
+    </div>
+
+    <div class="about-text">
+      <span>About Us</span>
+      <h2> We speak the healthy <br> food Language</h2>
+      <p>I believe in eating a good breakfast, a good lunch and a light dinner. Eat breakfast like a king, eat lunch
+        like a queen, and eat dinner like a pauper. Your ultimate goal is to eat all the basic food groups in those
+        three different meals. I feel better all day if I start off by eating healthy. </p>
+      <a href="#" class="btn"> Know more</a>
+    </div>
+  </section>
+
+  <!-- menu list -->
+
+  <section class="menu" id="menu">
+    <div class="heading">
+      <span>Healt menu</span>
+      <h2> Frese taste and great Healt </h2>
+    </div>
+
+    <div class="menu-container">
+      <div class="box">
+        <div class="box-img">
+          <img src="img/food1.png" alt="foor1">
+        </div>
+        <h2>Food 1</h2>
+        <h3>Healthy food</h3>
+        <span>$11.2</span>
+        <i class='bx bxs-cart-alt'></i>
+      </div>
+
+      <div class="box">
+        <div class="box-img">
+          <img src="img/food1.png" alt="foor1">
+        </div>
+        <h2>Food 2</h2>
+        <h3>Healthy drink</h3>
+        <span>$11.2</span>
+        <i class='bx bxs-cart-alt'></i>
+      </div>
+
+      <div class="box">
+        <div class="box-img">
+          <img src="img/food2.png" alt="foor1">
+        </div>
+        <h2>Food 3</h2>
+        <h3>Healthy snaks</h3>
+        <span>$11.2</span>
+        <i class='bx bxs-cart-alt'></i>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- services -->
+
+  <section class="services" id="services">
+    <div class="heading">
+      <span> services</span>
+      <h2>We provide the best in your area </h2>
+    </div>
+
+    <div class="services-container">
+      <div class="s-box">
+        <img src="img/s1.png" alt="services">
+        <h3>Order</h3>
+        <p>Food delivery services have become very popular in recent years, but never more so than during the pandemic,
+          when dining out was a no-go for many.</p>
+      </div>
+
+      <div class="s-box">
+        <img src="img/s2.png" alt="services">
+        <h3>Shipping</h3>
+        <p>Food delivery services have become very popular in recent years, but never more so than during the pandemic,
+          when dining out was a no-go for many.</p>
+      </div>
+
+      <div class="s-box">
+        <img src="img/s3.png" alt="services">
+        <h3>Delivery</h3>
+        <p>Food delivery services have become very popular in recent years, but never more so than during the pandemic,
+          when dining out was a no-go for many.</p>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+  <!-- service start -->
+
+  <section class="cta">
+    <h2>We make quality food <br> Everyday</h2>
+    <a href="#" class="btn"> Let's talk </a>
+  </section>
+
+  <!-- FOTTER` -->
+  <section id="contact">
+    <div class="footer">
+      <div class="main">
+
+        <div class="col">
+          <h4>Menu Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Home Delivery</a></li>
+            <li><a href="#">Diet plan</a></li>
+            <li><a href="#">Dietition</a></li>
+            <li><a href="#">Presdcribed food</a></li>
+            <li><a href="#">Food for Everyday</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Delivery Info</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col">
+          <h4>Contacts</h4>
+          <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+</body>
+
+</html>
