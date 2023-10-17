@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <gtk/gtk.h>
 
 static void
@@ -26,3 +27,4 @@ main (int    argc,
   return status;
 }
 
+ 
