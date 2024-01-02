@@ -34,20 +34,20 @@ const books = [
 // }
 const App = () => {
   const getBook = (id) => {
-    const book =  book.find((book) => { book.id === id });
+    const book = books.find((book) => book.id === id);
     console.log(book);
-  }
+  };
+
   return (
     <section className='booklist'>
       {books.map((book) => {
-        return <Book book={...book} key={book.id} getBook={getBook} />;
+        return <Book {...book} key={book.id} getBook={getBook} />;
       })}
     </section>
   );
-}
-
+};
 const Book = (props) => {
-  const { img, title, author, getBook } = props.book;
+  const { img, title, author, getBook } = props;
   console.log(props)
   return (
     <section className='book'>
