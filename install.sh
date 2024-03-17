@@ -65,6 +65,29 @@ command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
+
+setup_package_manager() {
+    if command_exists apt; then
+        PACKAGE_MANAGER="apt"
+        INSTALL_COMMAND="sudo apt -y install"
+    elif command_exists dnf; then
+        PACKAGE_MANAGER="dnf"
+        INSTALL_COMMAND="sudo dnf -y install"
+    elif command_exists yum; then
+        PACKAGE_MANAGER="yum"
+        INSTALL_COMMAND="yes | sudo yum install"
+    elif command_exists yay; then
+        PACKAGE_MANAGER="yay"
+        INSTALL_COMMAND="yay -S --noconfirm"
+    elif command_exists pacman; then
+        PACKAGE_MANAGER="pacman"
+        INSTALL_COMMAND="sudo pacman -S --noconfirm"
+    else
+        _e "Unsupported package manager. Please install packages manually."
+        exit 1
+    fi
+}
+
 # Function to install one or more packages
 install_packages() {
     local package_manager="$PACKAGE_MANAGER"
@@ -104,17 +127,19 @@ create_symlinks(){
   done
   }
 
-main{
-_w "  ┌────────────────────────────────────┐"
+  main() {
+_w "  ┌──────────────────────────────────────┐"
 _w "~ │ 🚀 Welcome to the ${green}dothub${normal} installer!  │ ~"
-_w "  └────────────────────────────────────┘"
+_w "  └──────────────────────────────────────┘"
 _w
-_q "Where do you want your dotfiles to be located? (default ~/.dotfiles)" "DOTFILES_PATH"
+_q 'Where do you want your dotfiles to be located? (default ~/.dotfiles)' "DOTFILES_PATH"
 DOTFILES_PATH="${DOTFILES_PATH:-$HOME/.dotfiles}"
 DOTFILES_PATH="$(eval echo "$DOTFILES_PATH")"
 export DOTFILES_PATH="$DOTFILES_PATH" # path might contain variables or special characters that 
                                       # need to be expanded or interpreted correctly.                                      
 DOTHUB_CONFIG_PATH="$DOTFILES_PATH/dothub.conf"
+
+install_packages "git" "curl"
 
 }
 
