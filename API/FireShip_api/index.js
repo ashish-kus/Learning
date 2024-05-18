@@ -1,36 +1,32 @@
 const express = require('express');
 const app = express();
 const PORT = 8080;
+const Events = require("./data.json");
 
-app.use(express.json())
+app.use(express.json());
 app.listen(
   PORT,
-  () => console.log(`it is a alive on https://localhost:${PORT}`)
-)
-
+  () => console.log(`Server is alive on https://localhost:${PORT}`)
+);
 
 app.get(
-  '/tshirt',
+  '/api/events',
   (req, res) => {
-    res.status(200).send({
-      tshirt:"nandu",
-      size:"100"
-    })
+    res.status(200).send(Events);
   }
 );
 
-app.post('/tshirt/:id', 
+
+app.get(
+  '/api/events/:id',
   (req, res) => {
-    const {id} = req.params;
-    const {logo} = req.body;
-
-    if(!logo){
-      res.status(418).send({message: 'we need a logo!'})
+    const id = req.params.id;
+    const event = Events[id];
+    if (event) {
+      return res.status(200).send(event);
+    } else {
+      return res.status(404).send("Event not found");
     }
-
-    res.send({
-      tshirt:`nandu with yout ${logo}`,
-    })
-
   }
-)
+);
+
