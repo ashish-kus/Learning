@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Audio Recorder",
+  "version": "1.0",
+  "description": "Record audio in Chrome",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [ "background.js" ]
+  }
+}
+

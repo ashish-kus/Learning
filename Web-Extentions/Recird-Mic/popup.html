@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hire Mate</title>
+    <link rel="stylesheet" href="./css/popup.css">
+</head>
+<body>
+    <h1>Hire Mate</h1>
+    <form id="voiceForm" method="POST" action="/activate_assistant" enctype="multipart/form-data">
+        <label for="text">Listening ...</label><br>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea> <br><br>
+        <button type="button" id="activateAssistantButton">Activate Assistant</button>
+
+        <label for="file-input" class="rectangular-button">Upload CV</label>
+        <input type="file" name="cv" id="file-input" class="hidden" accept=".pdf,.doc,.docx"><br><br>
+    </form>
+    <br>
+    <script type="module" src="./requestPermission.ts"></script>
+    <script src = "popup.js">
+    </script>
+</body>
+</html> 

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "HireMate Assistant",
+  "version": "0.0.1.2",
+  "description": "An extension to assist interviewers by recording audio and providing real-time feedback.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabCapture",
+    "offscreen"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "./icons/Ariallabs.png"
+  }
+}

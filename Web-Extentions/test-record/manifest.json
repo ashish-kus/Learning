@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Interview Assistant",
+  "version": "1.0",
+  "description": "An extension to assist interviewers by recording audio and providing real-time feedback.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "microphone",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

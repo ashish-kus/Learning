@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Audio Access",
+    "version": "0.0.1.0",
+    "description": "Audio extension",
+    "permissions": [
+      "sidePanel",
+      "tabs"
+    ],
+    "background": {
+      "service_workesr": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "128": "icons/ArialLabs.png"
+      }
+    },
+    "icons": {
+      "128": "icons/ArialLabs.png"
+    }
+  }
+  

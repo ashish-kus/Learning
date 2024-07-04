@@ -1,0 +1,5 @@
+{
+    "manifest_version": 3,
+    "name":"loomfox",
+    "description":"loom inspired web extention for firefox"
+}
