@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Microphone Recorder",
+  "version": "1.0",
+  "description": "An extension to record microphone audio.",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
